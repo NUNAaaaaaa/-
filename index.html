@@ -1,4 +1,4 @@
-
+html_content = """
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -13,7 +13,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: url('C:/Users/Administrator/Desktop/图片1.png') no-repeat center center fixed;
+            background: url('图片1.png')  no-repeat center center fixed;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -110,7 +110,7 @@
 <body>
     <div class="header">
         <h1>“燃小乙”助农体质诊断系统</h1>
-        <img src="C:/Users/Administrator/Desktop/图片2.png" alt="Logo" style="width: 200px;"> <!-- 添加图片，并设置宽度为200px -->
+        <img src="图片2.png" alt="Logo" style="width: 200px;"> <!-- 使用相对路径 -->
     </div>
     <div class="grid-container">
         <div class="grid-item">体质分析</div>
@@ -159,3 +159,10 @@
     </script>
 </body>
 </html>
+"""
+
+# 将HTML内容写入文件
+with open('index.html', 'w', encoding='utf-8') as file:
+    file.write(html_content)
+
+print("HTML文件已生成：index.html")
